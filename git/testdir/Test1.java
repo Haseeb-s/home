@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -32,22 +33,21 @@ public class Test1 {
                 }
             }
         }
-
+        System.out.println(Arrays.toString(score));
+        System.out.println(Arrays.toString(next));
         int counter = 0;
-        for(int x=0; x<numStudents-1; x++)
+        for(int x=0; x<score.length; x++)
         {
-            for(int j = 0; j < numStudents-1; j++)
+            for(int j = 0; j < score.length; j++)
             {
                 System.out.println(next[x]+" compare " + score[j]);
-                if (next[counter] == score[j])
+                if (next[x] == score[j])
                 {
-                    System.out.println(studentName[counter]);
+                    System.out.println(studentName[j]);
+                    break;
                 }
-                counter++;
             }
-            counter = 0;
         }
-
 
 
 
